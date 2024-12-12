@@ -1,0 +1,105 @@
+{% extends 'app/base.html' %}
+
+
+{% block content %}
+
+<style>
+    body, html{
+    background: #000000;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0f9b0f, #1d0707);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #02524d, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    }
+    
+    
+        input {
+            width: 100%;
+            margin-bottom: 10px;
+            margin-top: 2rem;
+            border-radius: 0.8rem;
+            border: none;
+            
+            padding: 0.5rem;
+        }
+    
+        .card {
+            height: 350px;
+            width: 350px;
+            background: #0a4c3b;
+            color: white;
+            border: 2px solid rgb(14, 59, 17);
+            border-radius: 2rem;
+            box-shadow: 1px 1px 7px wheat;
+        }
+    
+        button {
+            margin-top: 2rem;
+        }
+    
+        p {
+            padding-top: 1rem;
+            margin-bottom: 2rem;
+            color: #1ed4a6;
+        }
+    
+        p a {
+            float: right;
+            color: #1ed4a6;
+        }
+        a:hover{
+            text-decoration: none;
+        }
+    
+        h3 {
+            display: flex;
+            padding-left: 1.6rem;
+        }
+    </style>
+    
+    
+
+
+
+
+
+
+
+
+
+<div class="row mt-5 py-3 justify-content-center">
+
+    <div class="col-md-1">
+
+    </div>
+
+    <div class="col-md-4 w-100">
+        <ul class="messages">
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        <div class="card h-600">
+            <div class="card-body shadow">
+      
+                <div class="container">
+                    <h3 class=" mx-2">Create Account</h3>
+                    <form action="" method="post">
+                        {% csrf_token %}
+                        <input type="text" name="username" , placeholder="username" required>
+                        <input type="password" name="password" , placeholder="password" required>
+                        <button class="btn btn-block btn-success">Sign Up</button>
+                        <p>already have account <a href="{% url 'login' %}">Login </a></p>
+      
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+
+
+
+{% endblock %}

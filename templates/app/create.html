@@ -1,0 +1,57 @@
+{% extends 'app/base.html' %}
+
+
+{% block content %}
+
+
+
+
+<style>
+    body {
+        background: #8ccce0;
+    }
+
+    .name {
+        width: 380px;
+        margin-bottom: 1rem;
+        height: 50px;
+        border: none;
+        border-radius: 5px;
+        padding-left: 1rem;
+    }
+
+    .body {
+        width: 380px;
+        height: 200px;
+        border: none;
+        border-radius: 5px;
+    }
+    .form-group{
+      padding-top: 10rem;
+    }
+</style>
+
+
+<div class="container">
+    
+    <div class="form-group">
+        <a href="{% url 'home' %}" class="btn btn-secondary btn-sm mx-3" >Home</a>
+        <div class="container">
+
+            <form action="" method="post">
+                {% csrf_token%}
+                {{text}}
+                <br>
+                <button class="btn btn-secondary btn-sm" style=" width: 387px; height: 30px;">post</button>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+{% endblock %}

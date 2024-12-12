@@ -1,0 +1,39 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+<div class="row  pt-5" style="padding-top:4rems ;">
+
+
+    <div class="col-md-2"></div>
+    <div class="col-md-6">
+
+        <a href="{% url 'home' %}" class="btn btn-secondary btn-sm mb-3" >Home</a>
+        <div class="container" style="align-items: center; justify-content: center; display: flex;">
+   
+            <div class="card" style="margin-top: 5rem;">
+
+                
+                <div class="card-body shadow">
+                    <h4>{{view.name}}</h4>
+                    <p>{{view.body}}</p>
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+</div>
+{% endblock %}

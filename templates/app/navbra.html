@@ -1,0 +1,34 @@
+<!-- <style>
+    nav{
+       width: 100%; height: 80px; 
+         margin-top: -3rem; background: #0d3827; color: #a8923a; z-index: 999;
+         position:absolute;
+         padding: 0;
+    }
+    ul{
+        display: flex;
+        align-items: center;
+     
+    }
+    li{
+      
+   text-decoration: none;
+   padding: 25px 20px;
+   align-items: center;
+   list-style: none;
+   font-size: 18px;
+   font-family: sans-serif;
+    }
+</style>
+
+<nav >
+<ul>
+    {% if page != 'login' %}
+    <li><a href="{% url 'logout' %}">Logout</a></li>
+   <li> <a href="{% url 'home' %}">Home</a></li>
+<li> <a href="{% url 'create' %}">Post</a></li>
+{% endif %}
+</ul>
+
+</nav>
+

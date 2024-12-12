@@ -1,0 +1,23 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+
+<div class="container pt-5">
+
+    <div class="card-body"  style="padding-top: 10rem;">
+        <a href="{{request.META.HTTP_REFERER}}" class="btn btn-secondary mt-3 mx-0 my-1" style="width: 200px; ">Back</a>
+        <form action="" method="post">
+            
+            {% csrf_token%}
+        <div class="bet" style="background: gray; width: 400px; align-items: center; 
+         padding: 4rem; border-radius: 1rem;">
+        
+            <p>Are you sure you want to delete "<b style="color: rgb(6, 1, 1);">{{obj.name}}</b>"</p>
+           
+            <input type="submit" value="confirm" style="width: 200px; margin-left:1rem;">
+        </div>
+        </form>
+
+    </div>
+
+    {% endblock %}
